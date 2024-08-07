@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import MenuLarge from "./components/Home/Menu/MenuLarge";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,21 +21,12 @@ export default function RootLayout({
         {/* -----------Web  Container with max width----------- */}
         <main className="max-w-[1260px] mx-auto">
           {/* ---------main section------- */}
-          <div className="flex ">
-
+          <div className="flex justify-center ">
             {/* ---------Menu For Large Devices------- */}
-            <aside>
-              <div>
-                
-              </div>
-              <ul>
-                <li></li>
-              </ul>
-            </aside>
-
+            <MenuLarge />
 
             {/* ----------Main Content--------------- */}
-            <div>{children}</div>
+            <div className="w-[80%]">{children}</div>
           </div>
         </main>
       </body>
