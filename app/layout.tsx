@@ -26,7 +26,7 @@ export default function RootLayout({
             <MenuLarge />
 
             {/* ----------Main Content--------------- */}
-            <div className="w-[80%]">{children}</div>
+            <div className="w-[80%] p-5" >{children}</div>
           </div>
         </main>
       </body>
