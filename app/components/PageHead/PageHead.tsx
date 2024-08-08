@@ -3,24 +3,31 @@ import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { HiOutlineBell } from "react-icons/hi2";
-import adminImage from '@/public/assets/images/admin.jpeg';
+import adminImage from '@/public/assets/images/adminSmall.jpeg';
+import Image from "next/image";
+import { FaChevronDown } from "react-icons/fa6";
 
-const PageHead = () => {
+type PageHeadProps = {
+    routeName: string,
+    pageTitle: string
+}
+
+const PageHead = ({routeName, pageTitle}: PageHeadProps) => {
   const [currencyDropdownOpen, setCurrencyDropdownOpen] = useState(false);
   const [notificationDropdownOpen, setNotificationDropdownOpen] = useState(false);
 
   return (
     <div className="px-5 w-full bg-white flex justify-between items-center">
       <div className="w-5/12">
-        <h2 className="font-bold text-[40px] mt-0">{"Overview"}</h2>
+        <h2 className="font-bold text-[40px] mt-0">{pageTitle}</h2>
         <p className="text-xs text-[#888888] pb-5">
           {" "}
-          Dashboard {">"} {"Home"}
+          Dashboard {">"} {routeName}
         </p>
       </div>
 
-      <div className="w-7/12">
-        <div className="flex items-center gap-3">
+      <div className="w-7/12 ">
+        <div className="flex items-center justify-between gap-4">
           {/* ---------Search Bar---------- */}
           <div className="relative w-[126px] h-[51px]">
             <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -133,6 +140,19 @@ const PageHead = () => {
                 </div>
               </div>
             )}
+          </div>
+
+          {/* ---------Use & Admin info ----------- */}
+          <div className="flex justify-between items-center gap-3 ">
+           <Image src={adminImage} alt="User Image" width={51} height={51} className=" border border-[#697AD2] rounded-xl" />
+           <div>
+            <p className="text-[#1C2554] text-sm">Mohammad Ratul Hasan</p>
+            <p className="text-[11px] text-[##5F5F5F]">Super Admin</p>
+           </div>
+           
+           <FaChevronDown className="text-[#1C2554] text-sm" />
+
+
           </div>
         </div>
       </div>
