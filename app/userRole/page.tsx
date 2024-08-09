@@ -5,7 +5,7 @@ const page = () => {
     <div className="w-full ">
       <PageHead pageTitle="User & Role" routeName="userRole" />
 
-      <div className="p-5">
+      <div className="p-5 2xl:p-8">
         <h1 className="">User & Role</h1>
       </div>
     </div>
