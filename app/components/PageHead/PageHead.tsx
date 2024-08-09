@@ -17,17 +17,17 @@ const PageHead = ({routeName, pageTitle}: PageHeadProps) => {
   const [notificationDropdownOpen, setNotificationDropdownOpen] = useState(false);
 
   return (
-    <div className="px-5 w-full bg-white flex justify-between items-center">
-      <div className="w-5/12">
-        <h2 className="font-bold text-[40px] mt-0">{pageTitle}</h2>
+    <div className="px-5 2xl:px-8 w-full bg-white flex justify-between items-center">
+      <div className="w-5/12 ">
+        <h2 className="font-bold text-[40px] 2xl:text-[44px] mt-0">{pageTitle}</h2>
         <p className="text-xs text-[#888888] pb-5">
           {" "}
           Dashboard {">"} {routeName}
         </p>
       </div>
 
-      <div className="w-7/12 ">
-        <div className="flex items-center justify-between gap-4">
+      <div className="w-7/12  ">
+        <div className="flex items-center justify-end  gap-4">
           {/* ---------Search Bar---------- */}
           <div className="relative w-[126px] h-[51px]">
             <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">

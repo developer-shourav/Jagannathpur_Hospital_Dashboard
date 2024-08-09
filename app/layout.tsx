@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {/* -----------Web  Container with max width----------- */}
-        <main className="max-w-[1330px] mx-auto">
+        <main className="max-w-[1512px] w-[96vw] mx-auto">
           {/* ---------main section------- */}
           <div className="flex justify-center ">
             {/* ---------Menu For Large Devices------- */}
